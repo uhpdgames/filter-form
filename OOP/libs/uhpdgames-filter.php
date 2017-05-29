@@ -1,11 +1,39 @@
 <?php
 /**
- * VER 1.00 : FILTER
- * User: uhpdgames
+ * VER 1.01
+ * Author: uhpdgames
  * Date: 05/28/17
  * Time: 5:48 PM
+ * UPDATE : 05/29/17 - 7:37 PM
  */
-CLASS UHPDGames_FILTER {
+
+/**
+ * Class UHPDGAMES_FILTER
+ * HOW TO USE
+ *
+ * CALL
+include_once libraries_get_path('UHPGames') . '/uhpdgames-filter.php';
+module_load_include('php','test_filter', 'uhpdgames-filter.php');
+include __DIR__ .'/uhpdgames-filter.php';
+ *
+ *FUNCTION FORM
+global $filter;
+$filter = new UHPDGAMES_FILTER();
+
+$fi = array('');
+$he =  array('');
+$filter->SET_select_table('');
+$filter->SET_filter($fi, $he, 'filter');
+$filter->SET_option_filter(array(''));
+
+$filter->SET_filter($fi, $he, 'list');
+$filter->create_form_filter($form, $form_state);
+ *
+ *FUNCTION FORM SUBMIT
+$values = $form_state['values'];
+$GLOBALS['filter']->GET_submit_filters($values);
+ */
+CLASS UHPDGAMES_FILTER {
 
     private $database;
     private $filter;
@@ -13,7 +41,7 @@ CLASS UHPDGames_FILTER {
     private $option_filter;
     private $description = array();
     private $field_options = array('type', 'title', 'size', 'options', 'default_value', 'description', 'autocomplete_path');
-    private $sodong_select = array(25 => 25, 50 => 50, 100 => 100);
+    private $sodong_select = array(10 => 10, 20 => 20, 50 => 50,100 => 100);
 
     public $name_session = 'uhpdgames_filter_session';
     public $name_filter = 'uhpdgames_filter';
@@ -24,9 +52,10 @@ CLASS UHPDGames_FILTER {
     /**
      * @param array $arr_field
      * @param array $arr_header
+     * @param $type null | list
      * @return array[field, header];
      */
-    public function SET_filter($arr_field = array(), $arr_header = array(), $type = 'filter') {
+    public function SET_filter($arr_field = array(), $arr_header = array(), $type) {
         $values = array(
             'field' => $arr_field,
             'header' => $arr_header
@@ -75,21 +104,22 @@ CLASS UHPDGames_FILTER {
         $list = isset($this->list) ? $this->list : NULL;
 
         if(empty($name_database)) {
-            $form['filter_wraper'] = array('#markup' => t('Bạn chưa nhập tên bảng nào để lọc<br>Định dạng: table = SET_select_table(name_table);'));
+            drupal_set_message(t('Bạn chưa nhập tên bảng nào để lọc<br>Định dạng: SET_select_table(name_table);'));
             return;
         }else if(empty($filter) || !is_array($filter)) {
-            $form['filter_wraper'] = array('#markup' => t('Bạn chưa cấu hình đúng filter<br>Định dạng: filter = array(field=>array(),header=>array());'));
+            drupal_set_message(t('Bạn chưa cấu hình đúng filter<br>Định dạng: SET_filter array(field=>array(),header=>array());'));
             return;
         }else if(empty($list) || !is_array($list)) {
-            $form['filter_wraper'] = array('#markup' => t('Bạn chưa cấu hình đúng list<br>Định dạng: list = array(field=>array(),header=>array(), list);'));
+            drupal_set_message(t('Bạn chưa cấu hình đúng list<br>Định dạng: SET_filter array(field=>array(),header=>array(), list);'));
             return;
         }else{
-            if(@session_status())
-                $_SESSION[$name_session] = $name_session;
-            else {
-                @session_start();
-                $_SESSION[$name_session] = $name_session;
-            }
+
+            /* if(@session_status())
+                 $_SESSION[$name_session] = $name_session;*/
+
+            // @session_start();
+            //$_SESSION[$name_session] = $name_session;
+
             $form_state[$name_filter] = array(
                 #require
                 'session' => $name_session,
@@ -105,8 +135,8 @@ CLASS UHPDGames_FILTER {
                 '#prefix' => '<div id="filter-wrapper" class="container-inline">',
                 '#suffix' => '</div>',
             );
-            $form['filter_wraper']['filter'] = $this->filter_form($this->filters($form_state[$name_filter]));
-            $form['filter_wraper']['submit'] = array('#type' => 'submit', '#value' => t('Lọc'));
+            $form['filter_wraper']['filter'] = $this->filter_form($this->filters());
+            $form['filter_wraper']['submit'] = array('#type' => 'submit', '#value' => t('Lọc'),  '#attributes' => array('name' =>'submit_filter'));
             if ($this->render_list) {
                 $form['list'] = array('#markup' => $this->GET_render_list($form_state));
             }
@@ -118,40 +148,45 @@ CLASS UHPDGames_FILTER {
      * Trả về kết quả tìm kiếm
      * @param $form_state
      */
-    public function GET_submit_filters($form_state) {
-        $state = (isset($form_state[$this->name_session]) ? $form_state[$this->name_session] : NULL);
-        if (!$state) {
-            drupal_set_message(t('Chưa thiết lập form filer'));
-            return;
-        }
-        $filters = $this->filters($state);
-        $values = $form_state['values'];
-        foreach ($filters as $filter => $options) {
-            if (isset($values[$filter]) && $values[$filter] != '') {
-                if (isset($filters[$filter]['options'])) {
-                    $flat_options = @form_options_flatten($filters[$filter]['options']);
-                    if (isset($flat_options[$values[$filter]])) {
-                        $_SESSION[$_SESSION[$this->name_session]][$filter] = $values[$filter];
+    public function GET_submit_filters($values) {
+        if(isset($_POST['submit_filter'])) {
+
+
+            /*$state = (isset($form_state[$this->name_filter]) ? $form_state[$this->name_filter] : NULL);
+            if (empty($state)) {
+              drupal_set_message(t('Chưa thiết lập form filer'));
+              return;
+            }*/
+            $filters = $this->filters();
+            $name = $this->filter;
+            foreach ($filters as $filter => $options) {
+                $values_filter = isset($name['filter']['field']) ? $name['filter']['field'] : '';
+                if (isset($values[$filter])) {
+                    if (isset($filters[$filter]['options'])) {
+                        $flat_options = form_options_flatten($filters[$filter]['options']);
+                        if (isset($flat_options[$values[$filter]])) {
+                            //error
+                            $_SESSION[$this->name_session][$filter] = $this->uhpdgames_set_session($values_filter, $values[$filter]);
+                        }
+                    } else {
+                        $_SESSION[$this->name_session][$filter] = $this->uhpdgames_set_session($values_filter, $values[$filter]);
                     }
                 } else {
-                    $_SESSION[$_SESSION[$this->name_session]][$filter] = $values[$filter];
+                    unset($_SESSION[$this->name_session][$filter]);
                 }
-            } else {
-                unset($_SESSION[$_SESSION[$this->name_session]][$filter]);
             }
+
+            $form_state['rebuild'] = TRUE;
         }
-        $form_state['rebuild'] = TRUE;
     }
     #RENDER
     /**
      * Trả vể mảng dữ liệu đã xử lý lọc
      * @param $form_state : require
-     * @param false $select_all : Lấy tất cả dữ liệu bởi filter bằng phương thức select * form table.. LÀ TRUE
-     * @param false $full_stack : Lấy tất cả dữ liệu bởi filter là TRUE
      * @return array
      */
     public function GET_render_items($form_state) {
-        $state = (isset($form_state[$this->name_session]) ? $form_state[$this->name_session] : array());
+        $state = (isset($form_state[$this->name_filter]) ? $form_state[$this->name_filter] : array());
         if (!isset($state['db_select']) || !is_string($state['db_select'])) return array(); //not found for query. Exit!
 
         $stt = 1;
@@ -168,15 +203,15 @@ CLASS UHPDGames_FILTER {
         $this->data_search_value($query, $state['filter']['field']);
         $limit = $this->uhpdgames_is_value_session('sodong');
 
-        //$field = (isset($is_table_of_select) ? array_merge(array($is_table_of_select), $values['field']) : $values['field']);
+        $field = $values['field'];
         //$header = (isset($is_table_of_select) ? array_merge(array(''), $header) : $header);
 
         if ($this->select_all) $field = $header = array(); //error$field$header
         $query->fields('uhpdgames', $field);
 
         if ($this->full_stack) $limit = $query->countQuery()->execute()->fetchField();
-        $query->limit($limit)->orderByHeader($header);
-        $result = $query->execute();
+        $query->limit(10)->orderByHeader($header);
+        $result = $query->execute()->fetchAll();
 
         foreach ($result as $i => $row) {
             $items[$i]['stt'] = $stt++;
@@ -190,8 +225,6 @@ CLASS UHPDGames_FILTER {
     /**
      * Trả về danh sách dữ liệu đã xử lý lọc
      * @param $form_state
-     * @param bool $select_all
-     * @param bool $full_stack
      * @return list
      */
     public function GET_render_list($form_state) {
@@ -229,11 +262,11 @@ CLASS UHPDGames_FILTER {
      * @param $state is $form_state
      * @return array $filters
      */
-    private function filters($state) {
+    private function filters() {
         $filters = array();
-        $form = $state[$this->filter];
-        $option_change = $state[$this->option_filter];
-        $description = isset($state[$this->description]) ? $this->description : array();
+        $form = $this->filter;
+        $option_change = $this->option_filter;
+        $description = isset($this->description) ? $this->description : array();
 
         for ($i = 0; $i < count($form['field']); $i++) {
             if (is_array($option_change[$i])) {
@@ -262,6 +295,20 @@ CLASS UHPDGames_FILTER {
         );
         return $filters;
     }
+
+    /**
+     * Ghi gia tri session tam thoi
+     * @param $key
+     * @param null $value
+     * @return mixed
+     */
+    private function uhpdgames_set_session($key, $value = null){
+        if (isset($value)) {
+            if(isset($_SESSION[$key])) unset($_SESSION[$key]);
+            $_SESSION[$key] = $value;
+        }
+        if (isset($_SESSION[$key])) return $_SESSION[$key];
+    }
     /**
      * Ghi giá trị session cho $name
      * @param $name
@@ -269,7 +316,7 @@ CLASS UHPDGames_FILTER {
      */
     private function uhpdgames_is_value_session($name){
         if (!isset($_SESSION[$this->name_session])) return;
-        return !empty($_SESSION[$_SESSION[$this->name_session]][$name]) ? $_SESSION[$_SESSION[$this->name_session]][$name] : NULL;
+        return !empty($_SESSION[$this->name_session][$name]) ? $_SESSION[$this->name_session][$name] : NULL;
     }
     /**
      * Tìm kiếm theo điều kiện | mục tiêu $target
@@ -288,25 +335,7 @@ CLASS UHPDGames_FILTER {
                     $q->condition($v, '%' . db_like($value) . '%', 'LIKE');
             }
         }
-    }
-    #debug
-    public function GET_uhpdgames_debug($dpm = false, $any_state = array()){
-        if ($dpm) dpm($_SESSION[$_SESSION[$this->name_session]], 'session');
 
-        if ($any_state) {
-            if ($dpm) dpm($any_state, 'status');
-            else {
-                echo "<pre>";
-                print_r($any_state);
-                echo "</pre>";
-                die();
-            }
-        } else {
-            echo "<pre>";
-            print_r($_SESSION[$_SESSION[$this->name_session]]);
-            echo "</pre>";
-            die();
-        }
     }
 }
 ?>

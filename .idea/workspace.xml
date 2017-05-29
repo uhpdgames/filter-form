@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3003090-3789-4b40-9db9-1d8f4bfbe2f1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OOP/libs/uhpdgames-filter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OOP/libs/uhpdgames-filter.php" afterPath="$PROJECT_DIR$/OOP/libs/uhpdgames-filter.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,70 +18,72 @@
       <file leaf-file-name="uhpdgames-filter.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OOP/libs/uhpdgames-filter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            <state relative-caret-position="111">
+              <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
               <folding>
-                <element signature="e#638#749#0#PHP" expanded="false" />
-                <element signature="n#SET_filter#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-                <element signature="e#864#951#0#PHP" expanded="false" />
-                <element signature="e#1067#1219#0#PHP" expanded="false" />
-                <element signature="n#SET_option_filter#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-                <element signature="e#1454#1540#0#PHP" expanded="false" />
-                <element signature="e#1678#1782#0#PHP" expanded="false" />
-                <element signature="n#SET_select_table#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-                <element signature="e#1879#2006#0#PHP" expanded="false" />
-                <element signature="n#create_form_filter#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-                <element signature="e#2361#4189#0#PHP" expanded="false" />
-                <element signature="e#2572#4189#0#PHP" expanded="false" />
-                <element signature="e#2804#4189#0#PHP" expanded="false" />
-                <element signature="e#3029#4189#0#PHP" expanded="false" />
-                <element signature="e#3139#3251#0#PHP" expanded="false" />
-                <element signature="e#3292#3522#0#PHP" expanded="false" />
-                <element signature="e#3561#3830#0#PHP" expanded="false" />
-                <element signature="e#4051#4179#0#PHP" expanded="false" />
-                <element signature="e#4213#4281#0#PHP" expanded="false" />
-                <element signature="n#GET_submit_filters#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-                <element signature="e#4446#4554#0#PHP" expanded="false" />
-                <element signature="e#4647#5344#0#PHP" expanded="false" />
-                <element signature="e#4703#5334#0#PHP" expanded="false" />
-                <element signature="e#4776#5224#0#PHP" expanded="false" />
-                <element signature="e#4928#5090#0#PHP" expanded="false" />
-                <element signature="e#5109#5224#0#PHP" expanded="false" />
-                <element signature="e#5239#5334#0#PHP" expanded="false" />
-                <element signature="e#5406#5697#0#PHP" expanded="false" />
-                <element signature="n#GET_render_items#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-                <element signature="e#6113#6288#0#PHP" expanded="false" />
-                <element signature="e#6306#6386#0#PHP" expanded="false" />
-                <element signature="e#6306#6420#0#PHP" expanded="false" />
-                <element signature="e#7091#7266#0#PHP" expanded="false" />
-                <element signature="e#7177#7256#0#PHP" expanded="false" />
-                <element signature="e#7336#7500#0#PHP" expanded="false" />
-                <element signature="n#GET_render_list#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-                <element signature="e#7689#8048#0#PHP" expanded="false" />
-                <element signature="e#8084#8168#0#PHP" expanded="false" />
-                <element signature="n#filter_form#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-                <element signature="e#8288#8474#0#PHP" expanded="false" />
-                <element signature="e#8340#8464#0#PHP" expanded="false" />
-                <element signature="e#8507#8613#0#PHP" expanded="false" />
-                <element signature="n#filters#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-                <element signature="e#8873#9940#0#PHP" expanded="false" />
-                <element signature="e#8934#9930#0#PHP" expanded="false" />
-                <element signature="e#9017#9367#0#PHP" expanded="false" />
-                <element signature="e#9387#9930#0#PHP" expanded="false" />
-                <element signature="e#9508#9915#0#PHP" expanded="false" />
-                <element signature="e#9970#10228#0#PHP" expanded="false" />
-                <element signature="e#10265#10374#0#PHP" expanded="false" />
-                <element signature="n#uhpdgames_is_value_session#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-                <element signature="e#10632#10753#0#PHP" expanded="false" />
-                <element signature="n#data_search_value#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-                <element signature="e#10896#11231#0#PHP" expanded="false" />
-                <element signature="e#11035#11221#0#PHP" expanded="false" />
-                <element signature="e#11065#11106#0#PHP" expanded="false" />
-                <element signature="e#11123#11207#0#PHP" expanded="false" />
-                <element signature="n#GET_uhpdgames_debug#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-                <element signature="e#11412#11795#0#PHP" expanded="false" />
-                <element signature="e#11491#11632#0#PHP" expanded="false" />
-                <element signature="e#11643#11795#0#PHP" expanded="false" />
+                <element signature="e#114#764#0#PHP" expanded="false" />
+                <element signature="n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+                <element signature="e#1323#1466#0#PHP" expanded="false" />
+                <element signature="n#SET_filter#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+                <element signature="e#1570#1657#0#PHP" expanded="false" />
+                <element signature="e#1773#1925#0#PHP" expanded="false" />
+                <element signature="n#SET_option_filter#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+                <element signature="e#2160#2246#0#PHP" expanded="false" />
+                <element signature="e#2384#2488#0#PHP" expanded="false" />
+                <element signature="n#SET_select_table#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+                <element signature="e#2585#2712#0#PHP" expanded="false" />
+                <element signature="n#create_form_filter#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+                <element signature="e#3067#4817#0#PHP" expanded="false" />
+                <element signature="e#3245#4817#0#PHP" expanded="false" />
+                <element signature="e#3454#4817#0#PHP" expanded="false" />
+                <element signature="e#3658#4817#0#PHP" expanded="false" />
+                <element signature="e#3677#3762#0#PHP" expanded="false" />
+                <element signature="e#3894#4124#0#PHP" expanded="false" />
+                <element signature="e#4163#4432#0#PHP" expanded="false" />
+                <element signature="e#4679#4807#0#PHP" expanded="false" />
+                <element signature="e#4841#4909#0#PHP" expanded="false" />
+                <element signature="n#GET_submit_filters#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+                <element signature="e#4968#6307#0#PHP" expanded="false" />
+                <element signature="e#5019#5249#0#PHP" expanded="false" />
+                <element signature="e#5338#6253#0#PHP" expanded="false" />
+                <element signature="e#5496#6239#0#PHP" expanded="false" />
+                <element signature="e#5547#6128#0#PHP" expanded="false" />
+                <element signature="e#5706#5947#0#PHP" expanded="false" />
+                <element signature="e#5970#6128#0#PHP" expanded="false" />
+                <element signature="e#6147#6239#0#PHP" expanded="false" />
+                <element signature="e#6330#6438#0#PHP" expanded="false" />
+                <element signature="n#GET_render_items#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+                <element signature="e#6852#7027#0#PHP" expanded="false" />
+                <element signature="e#7045#7125#0#PHP" expanded="false" />
+                <element signature="e#7045#7159#0#PHP" expanded="false" />
+                <element signature="e#7745#7920#0#PHP" expanded="false" />
+                <element signature="e#7831#7910#0#PHP" expanded="false" />
+                <element signature="e#7990#8092#0#PHP" expanded="false" />
+                <element signature="n#GET_render_list#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+                <element signature="e#8281#8640#0#PHP" expanded="false" />
+                <element signature="e#8676#8760#0#PHP" expanded="false" />
+                <element signature="n#filter_form#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+                <element signature="e#8880#9066#0#PHP" expanded="false" />
+                <element signature="e#8932#9056#0#PHP" expanded="false" />
+                <element signature="e#9099#9205#0#PHP" expanded="false" />
+                <element signature="n#filters#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+                <element signature="e#9435#10502#0#PHP" expanded="false" />
+                <element signature="e#9496#10492#0#PHP" expanded="false" />
+                <element signature="e#9579#9929#0#PHP" expanded="false" />
+                <element signature="e#9949#10492#0#PHP" expanded="false" />
+                <element signature="e#10070#10477#0#PHP" expanded="false" />
+                <element signature="e#10532#10790#0#PHP" expanded="false" />
+                <element signature="e#10828#10941#0#PHP" expanded="false" />
+                <element signature="n#uhpdgames_set_session#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+                <element signature="e#11015#11146#0#PHP" expanded="false" />
+                <element signature="e#11217#11326#0#PHP" expanded="false" />
+                <element signature="n#uhpdgames_is_value_session#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+                <element signature="e#11562#11683#0#PHP" expanded="false" />
+                <element signature="n#data_search_value#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+                <element signature="e#11826#12161#0#PHP" expanded="false" />
+                <element signature="e#11965#12151#0#PHP" expanded="false" />
+                <element signature="e#11995#12036#0#PHP" expanded="false" />
+                <element signature="e#12053#12137#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -103,12 +105,12 @@
       <find>select_all</find>
       <find>name_session</find>
       <find>uit_filters</find>
-      <find>render_list</find>
       <find>$list</find>
+      <find>render_list</find>
     </findStrings>
     <replaceStrings>
-      <replace>$this-&gt;uhpdgames_is_value_session</replace>
       <replace>SET</replace>
+      <replace>$this-&gt;uhpdgames_is_value_session</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -136,9 +138,9 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="y" value="22" />
     <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -155,7 +157,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -216,6 +217,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -274,6 +276,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -307,33 +315,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1495968353671</updated>
-      <workItem from="1495968359484" duration="9233000" />
+      <workItem from="1495968359484" duration="9350000" />
+      <workItem from="1496055844732" duration="3461000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9233000" />
+    <option name="totallyTimeSpent" value="12811000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="22" width="1936" height="1066" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08413205" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12087327" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -354,7 +363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -362,17 +370,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#246#1775#0" expanded="false" />
-            <element signature="e#283#1772#0" expanded="false" />
-            <element signature="e#329#1766#0" expanded="false" />
-            <element signature="e#413#1756#0" expanded="false" />
-            <element signature="e#467#1742#0" expanded="false" />
-            <element signature="e#670#789#0" expanded="false" />
-            <element signature="e#860#1255#0" expanded="false" />
-            <element signature="e#985#1105#0" expanded="false" />
-            <element signature="e#1498#1724#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -384,14 +381,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OOP/libs/function.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="16" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/OOP/libs/function.inc" />
     <entry file="file://$PROJECT_DIR$/filter.inc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -465,10 +455,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../uhpdgames-filter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="128" column="44" lean-forward="true" selection-start-line="128" selection-start-column="44" selection-end-line="128" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/uit_filter.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="45" selection-end-column="5" />
+        <state relative-caret-position="97">
+          <caret line="44" column="7" lean-forward="false" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
           <folding>
             <element signature="n#uit_filter_help#0;n#!!top" expanded="false" />
             <element signature="e#246#351#0#PHP" expanded="false" />
@@ -541,70 +539,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OOP/libs/uhpdgames-filter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="111">
+          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
           <folding>
-            <element signature="e#638#749#0#PHP" expanded="false" />
-            <element signature="n#SET_filter#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-            <element signature="e#864#951#0#PHP" expanded="false" />
-            <element signature="e#1067#1219#0#PHP" expanded="false" />
-            <element signature="n#SET_option_filter#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-            <element signature="e#1454#1540#0#PHP" expanded="false" />
-            <element signature="e#1678#1782#0#PHP" expanded="false" />
-            <element signature="n#SET_select_table#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-            <element signature="e#1879#2006#0#PHP" expanded="false" />
-            <element signature="n#create_form_filter#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-            <element signature="e#2361#4189#0#PHP" expanded="false" />
-            <element signature="e#2572#4189#0#PHP" expanded="false" />
-            <element signature="e#2804#4189#0#PHP" expanded="false" />
-            <element signature="e#3029#4189#0#PHP" expanded="false" />
-            <element signature="e#3139#3251#0#PHP" expanded="false" />
-            <element signature="e#3292#3522#0#PHP" expanded="false" />
-            <element signature="e#3561#3830#0#PHP" expanded="false" />
-            <element signature="e#4051#4179#0#PHP" expanded="false" />
-            <element signature="e#4213#4281#0#PHP" expanded="false" />
-            <element signature="n#GET_submit_filters#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-            <element signature="e#4446#4554#0#PHP" expanded="false" />
-            <element signature="e#4647#5344#0#PHP" expanded="false" />
-            <element signature="e#4703#5334#0#PHP" expanded="false" />
-            <element signature="e#4776#5224#0#PHP" expanded="false" />
-            <element signature="e#4928#5090#0#PHP" expanded="false" />
-            <element signature="e#5109#5224#0#PHP" expanded="false" />
-            <element signature="e#5239#5334#0#PHP" expanded="false" />
-            <element signature="e#5406#5697#0#PHP" expanded="false" />
-            <element signature="n#GET_render_items#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-            <element signature="e#6113#6288#0#PHP" expanded="false" />
-            <element signature="e#6306#6386#0#PHP" expanded="false" />
-            <element signature="e#6306#6420#0#PHP" expanded="false" />
-            <element signature="e#7091#7266#0#PHP" expanded="false" />
-            <element signature="e#7177#7256#0#PHP" expanded="false" />
-            <element signature="e#7336#7500#0#PHP" expanded="false" />
-            <element signature="n#GET_render_list#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-            <element signature="e#7689#8048#0#PHP" expanded="false" />
-            <element signature="e#8084#8168#0#PHP" expanded="false" />
-            <element signature="n#filter_form#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-            <element signature="e#8288#8474#0#PHP" expanded="false" />
-            <element signature="e#8340#8464#0#PHP" expanded="false" />
-            <element signature="e#8507#8613#0#PHP" expanded="false" />
-            <element signature="n#filters#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-            <element signature="e#8873#9940#0#PHP" expanded="false" />
-            <element signature="e#8934#9930#0#PHP" expanded="false" />
-            <element signature="e#9017#9367#0#PHP" expanded="false" />
-            <element signature="e#9387#9930#0#PHP" expanded="false" />
-            <element signature="e#9508#9915#0#PHP" expanded="false" />
-            <element signature="e#9970#10228#0#PHP" expanded="false" />
-            <element signature="e#10265#10374#0#PHP" expanded="false" />
-            <element signature="n#uhpdgames_is_value_session#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-            <element signature="e#10632#10753#0#PHP" expanded="false" />
-            <element signature="n#data_search_value#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-            <element signature="e#10896#11231#0#PHP" expanded="false" />
-            <element signature="e#11035#11221#0#PHP" expanded="false" />
-            <element signature="e#11065#11106#0#PHP" expanded="false" />
-            <element signature="e#11123#11207#0#PHP" expanded="false" />
-            <element signature="n#GET_uhpdgames_debug#0;n#UHPDGames_FILTER#0;n#!!top" expanded="false" />
-            <element signature="e#11412#11795#0#PHP" expanded="false" />
-            <element signature="e#11491#11632#0#PHP" expanded="false" />
-            <element signature="e#11643#11795#0#PHP" expanded="false" />
+            <element signature="e#114#764#0#PHP" expanded="false" />
+            <element signature="n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+            <element signature="e#1323#1466#0#PHP" expanded="false" />
+            <element signature="n#SET_filter#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+            <element signature="e#1570#1657#0#PHP" expanded="false" />
+            <element signature="e#1773#1925#0#PHP" expanded="false" />
+            <element signature="n#SET_option_filter#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+            <element signature="e#2160#2246#0#PHP" expanded="false" />
+            <element signature="e#2384#2488#0#PHP" expanded="false" />
+            <element signature="n#SET_select_table#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+            <element signature="e#2585#2712#0#PHP" expanded="false" />
+            <element signature="n#create_form_filter#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+            <element signature="e#3067#4817#0#PHP" expanded="false" />
+            <element signature="e#3245#4817#0#PHP" expanded="false" />
+            <element signature="e#3454#4817#0#PHP" expanded="false" />
+            <element signature="e#3658#4817#0#PHP" expanded="false" />
+            <element signature="e#3677#3762#0#PHP" expanded="false" />
+            <element signature="e#3894#4124#0#PHP" expanded="false" />
+            <element signature="e#4163#4432#0#PHP" expanded="false" />
+            <element signature="e#4679#4807#0#PHP" expanded="false" />
+            <element signature="e#4841#4909#0#PHP" expanded="false" />
+            <element signature="n#GET_submit_filters#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+            <element signature="e#4968#6307#0#PHP" expanded="false" />
+            <element signature="e#5019#5249#0#PHP" expanded="false" />
+            <element signature="e#5338#6253#0#PHP" expanded="false" />
+            <element signature="e#5496#6239#0#PHP" expanded="false" />
+            <element signature="e#5547#6128#0#PHP" expanded="false" />
+            <element signature="e#5706#5947#0#PHP" expanded="false" />
+            <element signature="e#5970#6128#0#PHP" expanded="false" />
+            <element signature="e#6147#6239#0#PHP" expanded="false" />
+            <element signature="e#6330#6438#0#PHP" expanded="false" />
+            <element signature="n#GET_render_items#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+            <element signature="e#6852#7027#0#PHP" expanded="false" />
+            <element signature="e#7045#7125#0#PHP" expanded="false" />
+            <element signature="e#7045#7159#0#PHP" expanded="false" />
+            <element signature="e#7745#7920#0#PHP" expanded="false" />
+            <element signature="e#7831#7910#0#PHP" expanded="false" />
+            <element signature="e#7990#8092#0#PHP" expanded="false" />
+            <element signature="n#GET_render_list#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+            <element signature="e#8281#8640#0#PHP" expanded="false" />
+            <element signature="e#8676#8760#0#PHP" expanded="false" />
+            <element signature="n#filter_form#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+            <element signature="e#8880#9066#0#PHP" expanded="false" />
+            <element signature="e#8932#9056#0#PHP" expanded="false" />
+            <element signature="e#9099#9205#0#PHP" expanded="false" />
+            <element signature="n#filters#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+            <element signature="e#9435#10502#0#PHP" expanded="false" />
+            <element signature="e#9496#10492#0#PHP" expanded="false" />
+            <element signature="e#9579#9929#0#PHP" expanded="false" />
+            <element signature="e#9949#10492#0#PHP" expanded="false" />
+            <element signature="e#10070#10477#0#PHP" expanded="false" />
+            <element signature="e#10532#10790#0#PHP" expanded="false" />
+            <element signature="e#10828#10941#0#PHP" expanded="false" />
+            <element signature="n#uhpdgames_set_session#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+            <element signature="e#11015#11146#0#PHP" expanded="false" />
+            <element signature="e#11217#11326#0#PHP" expanded="false" />
+            <element signature="n#uhpdgames_is_value_session#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+            <element signature="e#11562#11683#0#PHP" expanded="false" />
+            <element signature="n#data_search_value#0;n#UHPDGAMES_FILTER#0;n#!!top" expanded="false" />
+            <element signature="e#11826#12161#0#PHP" expanded="false" />
+            <element signature="e#11965#12151#0#PHP" expanded="false" />
+            <element signature="e#11995#12036#0#PHP" expanded="false" />
+            <element signature="e#12053#12137#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
