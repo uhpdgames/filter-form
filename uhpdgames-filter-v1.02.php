@@ -4,18 +4,23 @@
  * Author: uhpdgames
 
 https://github.com/uhpdgames
-Home-Page: https://uhpdgames.me | https://uhpdgames.github.io
+Home-Page: http://uhpdgames.me | https://uhpdgames.github.io
 https://github.com/uhpdgames/filter-form
  */
 /**
-    ███    █▄     ▄█    █▄       ▄███████▄ ████████▄     ▄██████▄   ▄████████       ▄▄▄▄███▄▄▄▄      ▄████████    ▄████████
-    ███    ███   ███    ███     ███    ███ ███   ▀███   ███    ███   ███    ███     ▄██▀▀▀███▀▀▀██▄   ███    ███   ███    ███
-    ███    ███   ███    ███     ███    ███  ███    ███   ███    █▀   ███    ███     ███    ███   ███   ███    █▀    ███    █▀
-    ███    ███  ▄███▄▄▄▄███▄▄  ███    ███   ███    ███  ▄███        ███    ███     ███    ███   ███  ▄███▄▄▄       ███
-    ███    ███ ▀▀███▀▀▀▀███▀  ▀█████████   ███    ███ ▀▀███ ████▄ ▀███████████  ███    ███   ███ ▀▀███▀▀▀     ▀███████████
-    ███    ███   ███    ███     ███         ███    ███   ███    ███   ███    ███    ███    ███   ███    ███    █▄           ███
-    ███    ███   ███    ███     ███         ███   ▄███   ███    ███   ███    ███    ███    ███   ███    ███    ███    ▄█    ███
-    ████████▀    ███    █▀     ▄████▀      ████████▀    ████████▀    ███    █▀     ▀█     ███   █▀     ██████████  ▄████████▀
+ *
+.----------------.  .----------------.  .----------------.  .----------------.   .----------------.  .----------------.  .----------------.  .----------------.  .----------------.
+| .--------------. || .--------------. || .--------------. || .--------------. | | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+| | _____  _____ | || |  ____  ____  | || |   ______     | || |  ________    | | | |    ______    | || |      __      | || | ____    ____ | || |  _________   | || |    _______   | |
+| ||_   _||_   _|| || | |_   ||   _| | || |  |_   __ \   | || | |_   ___ `.  | | | |  .' ___  |   | || |     /  \     | || ||_   \  /   _|| || | |_   ___  |  | || |   /  ___  |  | |
+| |  | |    | |  | || |   | |__| |   | || |    | |__) |  | || |   | |   `. \ | | | | / .'   \_|   | || |    / /\ \    | || |  |   \/   |  | || |   | |_  \_|  | || |  |  (__ \_|  | |
+| |  | '    ' |  | || |   |  __  |   | || |    |  ___/   | || |   | |    | | | | | | | |    ____  | || |   / ____ \   | || |  | |\  /| |  | || |   |  _|  _   | || |   '.___`-.   | |
+| |   \ `--' /   | || |  _| |  | |_  | || |   _| |_      | || |  _| |___.' / | | | | \ `.___]  _| | || | _/ /    \ \_ | || | _| |_\/_| |_ | || |  _| |___/ |  | || |  |`\____) |  | |
+| |    `.__.'    | || | |____||____| | || |  |_____|     | || | |________.'  | | | |  `._____.'   | || ||____|  |____|| || ||_____||_____|| || | |_________|  | || |  |_______.'  | |
+| |              | || |              | || |              | || |              | | | |              | || |              | || |              | || |              | || |              | |
+| '--------------' || '--------------' || '--------------' || '--------------' | | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+'----------------'  '----------------'  '----------------'  '----------------'   '----------------'  '----------------'  '----------------'  '----------------'  '----------------'
+
  */
 /**
  * Class UHPDGAMES_FILTER
@@ -33,7 +38,7 @@ $field  = array('');
 $header =  array('');
 $filter->SET_select_table('');
 $filter->SET_filter($field, $header, 'filter');
-$filter->SET_option_filter(array(''));
+$filter->SET_filter_options(array(''));
 
 $filter->SET_filter($field, $header, 'list');
 $filter->create_form_filter($form, $form_state);
@@ -45,10 +50,10 @@ $GLOBALS['filter']->GET_submit_filters($values);
 CLASS UHPDGAMES_FILTER {
 
   private $database;
-  private $join_databases;
+  //private $join_databases;
   private $filter;
   private $list;
-  private $option_filter;
+  //private $filter_options;
   private $description = array();
   private $field_options = array('type', 'title', 'size', 'options', 'default_value', 'description', 'autocomplete_path');
   private $pages = array(10 => 10, 20 => 20, 50 => 50,100 => 100);
@@ -58,20 +63,21 @@ CLASS UHPDGAMES_FILTER {
   public $select_all = false;
   public $full_stack = false;
   public $render_list = true;
+  public $display_more_pages = true;
 
   //public $set_filter = true;
 
   /*    public function __construct(
         $table_name,
         $filter,
-        $option_filter = array(),
+        $filter_options = array(),
         $description = array(),
         $list
       )
       {
         $this->database = $table_name;
         $this->filter = $filter;
-        $this->option_filter = $option_filter;
+        $this->option_filter = $filter_options;
         $this->description = $description;
         $this->list = $list;
       }*/
@@ -82,14 +88,13 @@ CLASS UHPDGAMES_FILTER {
    * @param $type null | list
    * @return array[field, header];
    */
-  public function SET_filter($arr_field = array(), $arr_header = array(), $type = null) {
+  public function SET_filter($arr_field = array(), $arr_header = array(), $type = 'filter') {
     $values = array(
       'field' => $arr_field,
       'header' => $arr_header
     );
     if($type == 'list') return $this->list = $values;
-    elseif($type == 'filter') return $this->filter = $values;
-    else die('chỉ hỗ trợ 2 loại list & filter');
+    else return $this->filter = $values;
   }
 
   /**
@@ -98,7 +103,7 @@ CLASS UHPDGAMES_FILTER {
    * @return array option_filter
    *
    */
-  public function SET_option_filter($arr = array(), $description = false) {
+  public function SET_filter_options($arr = array(), $description = false) {
     $filter = isset($this->filter) ? $this->filter : array();
     $count_fields = count($filter['field']) ? : 0;
     $arr_op = array();
@@ -235,8 +240,8 @@ CLASS UHPDGAMES_FILTER {
     //$this->data_search_value($query, $state['filter']['field']);
     //$this->data_search_value($q, $state['filter']['field']);
     /*$limit = 25;
-    if($this->uhpdgames_is_value_session('sodong')) {
-      $limit = $this->uhpdgames_is_value_session('sodong');
+    if($this->uhpdgames_is_value_session('pages')) {
+      $limit = $this->uhpdgames_is_value_session('pages');
     }
     $field = $values['field'];*/
     //$header = (isset($is_table_of_select) ? array_merge(array(''), $header) : $header);
@@ -328,12 +333,14 @@ CLASS UHPDGAMES_FILTER {
         );
       }
     }
-    $filters['sodong'] = array(
-      'type' => 'select',
-      'title' => 'Số dòng',
-      'options' => $this->pages,
-      'default_value' => ($this->uhpdgames_is_value_session('sodong') ? $this->uhpdgames_is_value_session('sodong') : 25),
-    );
+    if($this->display_more_pages) {
+      $filters['pages'] = array(
+        'type' => 'select',
+        'title' => 'Số dòng',
+        'options' => $this->pages,
+        'default_value' => ($this->uhpdgames_is_value_session('pages') ? $this->uhpdgames_is_value_session('pages') : 25),
+      );
+    }
     return $filters;
   }
 
@@ -370,7 +377,7 @@ CLASS UHPDGAMES_FILTER {
       $value = $this->uhpdgames_is_value_session($v);
       if (empty($value)) continue;
       switch ($v) {
-        case 'sodong':
+        case 'pages':
           break;
         default:
           $q->condition($v, '%' . db_like($value) . '%', 'LIKE');
